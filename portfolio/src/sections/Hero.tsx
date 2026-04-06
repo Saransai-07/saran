@@ -78,18 +78,18 @@ const Hero = () => {
           className="order-1 mx-auto md:order-2"
         >
           <div className="relative rounded-[2rem] border border-slate-200/70 bg-white/70 p-4 shadow-2xl shadow-indigo-500/20 backdrop-blur-md dark:border-slate-800 dark:bg-slate-900/60">
-            {/* {!imageError ? ( */}
+            {!imageError ? (
               <img
                 src={profile}
                 alt="Saran profile"
                 onError={() => setImageError(true)}
                 className="h-100 w-100  rounded-[1.6rem] object-cover sm:h-100 sm:w-80"
               />
-            {/* ) : ( */}
-              {/* <div className="flex h-72 w-72 items-center justify-center rounded-[1.6rem] bg-gradient-to-br from-indigo-500 to-fuchsia-500 text-6xl font-black text-white sm:h-80 sm:w-80">
+            ) : (
+              <div className="flex h-72 w-72 items-center justify-center rounded-[1.6rem] bg-gradient-to-br from-indigo-500 to-fuchsia-500 text-6xl font-black text-white sm:h-80 sm:w-80">
                 Saran
-              </div> */}
-            {/* )} */}
+              </div>
+            )}
           </div>
         </motion.div>
       </div>
