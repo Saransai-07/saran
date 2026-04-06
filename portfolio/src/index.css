@@ -1,0 +1,19 @@
+@import "tailwindcss";
+
+
+body {
+  @apply bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-100 transition-colors duration-500;
+  font-family: "Inter", "Segoe UI", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+::selection {
+  @apply bg-indigo-500/30 text-slate-900 dark:text-white;
+}
