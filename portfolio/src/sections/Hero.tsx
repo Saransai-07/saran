@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import Button from "../UI/Button";
+import profile from "../assets/Profile.png";
 
 const Hero = () => {
   const [imageError, setImageError] = useState(false);
@@ -40,7 +41,7 @@ const Hero = () => {
           </div>
 
           <h1 className="text-4xl font-black leading-tight sm:text-5xl md:text-6xl">
-            Hi, I&apos;m Saran.
+            Hi, I'm Saran Sai Bessabathina.
             <span className="block bg-gradient-to-r from-indigo-500 to-fuchsia-500 bg-clip-text text-transparent">
               I build  web products and apps.
             </span>
@@ -79,7 +80,7 @@ const Hero = () => {
           <div className="relative rounded-[2rem] border border-slate-200/70 bg-white/70 p-4 shadow-2xl shadow-indigo-500/20 backdrop-blur-md dark:border-slate-800 dark:bg-slate-900/60">
             {!imageError ? (
               <img
-                src="/src/assets/Profile.png"
+                src={profile}
                 alt="Saran profile"
                 onError={() => setImageError(true)}
                 className="h-100 w-100  rounded-[1.6rem] object-cover sm:h-100 sm:w-80"
