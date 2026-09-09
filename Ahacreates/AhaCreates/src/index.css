@@ -1,0 +1,72 @@
+@import "tailwindcss";
+
+@theme {
+  --color-cream: #faf8f5;
+  --color-cream-dark: #f3efe8;
+  --color-charcoal: #2c2a28;
+  --color-charcoal-light: #4a4744;
+  --color-gold: #c4a574;
+  --color-gold-light: #d4bc8e;
+  --color-gold-dark: #a8894f;
+  --color-warm-gray: #8a8580;
+  --font-sans: "Inter", system-ui, sans-serif;
+  --font-serif: "Cormorant Garamond", Georgia, serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-cream text-charcoal font-sans antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-serif font-medium tracking-tight;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center rounded-full bg-gold px-8 py-3.5 text-sm font-medium tracking-wide text-white shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:bg-gold-dark hover:shadow-md focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center rounded-full border border-charcoal/20 bg-transparent px-8 py-3.5 text-sm font-medium tracking-wide text-charcoal transition-all duration-300 hover:-translate-y-0.5 hover:border-gold hover:text-gold focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold;
+  }
+
+  .card {
+    @apply overflow-hidden rounded-2xl bg-white shadow-sm transition-all duration-300;
+  }
+
+  .badge {
+    @apply inline-block rounded-full bg-cream-dark px-3 py-1 text-xs font-medium tracking-wider text-charcoal-light uppercase;
+  }
+
+  .section-padding {
+    @apply px-4 py-16 sm:px-6 lg:px-8 lg:py-24;
+  }
+
+  .container-narrow {
+    @apply mx-auto max-w-7xl;
+  }
+}
+
+@layer utilities {
+  .animate-fade-up {
+    opacity: 0;
+    transform: translateY(24px);
+    transition:
+      opacity 0.7s ease-out,
+      transform 0.7s ease-out;
+  }
+
+  .animate-fade-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

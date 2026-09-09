@@ -5,7 +5,7 @@ export const projects = [
     category: "Assets",
     description: "SCAPPS is a web application that allows users to manage their TimeTables and Room Capacity",
     github: "https://github.com/Saransai-07/SCAPPS_TSX2",
-    demo: "https://scapps.net",
+    demo: "#",
   },
   {
     id: 2,
